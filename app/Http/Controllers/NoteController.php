@@ -24,6 +24,6 @@ class NoteController extends Controller
     {
         $id->delete();
 
-        return redirect()->route('homepage')->with('success', 'deleted succesfully');
+        return redirect()->route('homepage')->with('delete', 'deleted succesfully');
     }
 }
