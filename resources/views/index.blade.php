@@ -1,6 +1,6 @@
 <x-layout>
-    @include('includes._success-msg')
-    @include('includes._submit-note')
+    @include('includes._nav')
+    <x-submit-note />
     <div class="lg:grid lg:grid-cols-6">
         @unless (count($notes) == 0)
             @foreach ($notes as $note)
