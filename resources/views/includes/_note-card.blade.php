@@ -1,16 +1,13 @@
-<div class="max-w-sm rounded overflow-hidden shadow-lg">
-    <div class="px-6 py-4">
-      <p class="text-gray-700 overflow-hidden text-base">
+<div
+    class="block rounded-lg p-6 text-surface bg-yellow-300 shadow-secondary-1 dark:bg-surface-dark dark:text-black mt-4 shadow-lg border border-gray-500">
+    <p class="mb-4 text-base overflow-auto">
         {{ $note->note }}
-      </p>
-    </div>
-    <div class="px-6 pt-4 pb-2">
-        <form action="{{ route('note.destroy', $note->id) }}" method="post">
-            @csrf
-            @method('delete')
-            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
-                Done
-            </button>
-        </form>
-    </div>
-  </div>
+    </p>
+    <form action="{{ route('note.destroy', $note->id) }}" method="post">
+        @csrf
+        @method('delete')
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
+            Done
+        </button>
+    </form>
+</div>

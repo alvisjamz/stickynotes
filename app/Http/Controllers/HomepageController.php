@@ -10,7 +10,7 @@ class HomepageController extends Controller
     public function index()
     {
         return view('index', [
-            'notes' => Notes::orderBy('created_at', 'DESC')->paginate(9)
+            'notes' => Notes::orderBy('created_at', 'DESC')->paginate(18)
         ]);
     }
 }
