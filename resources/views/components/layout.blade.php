@@ -25,6 +25,8 @@
     <main>
         {{ $slot }}
     </main>
+
+    <x-flash-msg />
 </body>
 
 </html>

@@ -17,13 +17,13 @@ class NoteController extends Controller
             'note' => request()->get('content', '')
         ]);
 
-        return redirect()->route('homepage')->with('success', 'note added succesfully');
+        return redirect()->route('homepage')->with('success', 'Note added');
     }
 
     public function destroy(Notes $id)
     {
         $id->delete();
 
-        return redirect()->route('homepage')->with('delete', 'deleted succesfully');
+        return redirect()->route('homepage')->with('delete', 'Note removed');
     }
 }
